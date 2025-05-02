@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn to Code - A Beginner's Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Developer_coding.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .small-image {
+            width: 150px;
+            height: auto;
+        }
+        .content-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            border-radius: 10px;
+            max-width: 900px;
+            text-align: justify;
+        }
+        .content-section h2 {
+            text-align: center;
+            color: #ffdd59;
+        }
+        .content-section img {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .content-section a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+        .terms {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            border-radius: 10px;
+            max-width: 900px;
+            text-align: justify;
+        }
+        .terms h2 {
+            text-align: center;
+            color: #ffdd59;
+        }
+        #terms-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #terms-modal .modal-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+        }
+        #terms-modal button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #agree-btn {
+            background-color: #28a745;
+            color: #fff;
+        }
+        #disagree-btn {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Terms Modal -->
+    <div id="terms-modal">
+        <div class="modal-content">
+            <h2>Terms and Conditions</h2>
+            <p>
+                By using this website, you agree to the following terms and conditions:
+            </p>
+            <ul>
+                <li>This website is for educational purposes only. The content provided is intended to help beginners learn coding concepts.</li>
+                <li>All external links provided on this website are for reference purposes. We are not responsible for the content on external websites.</li>
+                <li>Do not misuse the information provided on this website for malicious purposes.</li>
+                <li>We reserve the right to update these terms and conditions at any time without prior notice.</li>
+            </ul>
+            <p>
+                Do you agree to these terms and conditions?
+            </p>
+            <button id="agree-btn">I Agree</button>
+            <button id="disagree-btn">I Disagree</button>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <h1>Learn to Code</h1>
+        <p>Start your coding journey with this beginner-friendly guide!</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>What is Coding?</h2>
+            <p>Coding is the process of writing instructions for computers to perform specific tasks. It’s the foundation of all software, websites, and apps.</p>
+            <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Coding Languages" style="width: 150px; height: auto;">
+            </a>
+        </section>
+
+        <section class="steps">
+            <h2>Steps to Start Coding</h2>
+            <article>
+                <h3>1. Choose a Programming Language</h3>
+                <p>Start with beginner-friendly languages like Python, JavaScript, or HTML/CSS. Here are some additional languages to explore:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.python.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>Python - Great for beginners, widely used for web development, data science, and automation.</p>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>JavaScript - Essential for web development, used for creating interactive websites.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/html/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>HTML - The backbone of web pages, used for structuring content.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/css/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>CSS - Used for styling and designing web pages.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.java.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>Java - A versatile language used for building applications, games, and Android apps.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.cprogramming.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>C - A foundational language for system programming and embedded systems.</p>
+                    </li>
+                    <li>
+                        <a href="https://isocpp.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>C++ - An extension of C, widely used for game development and high-performance applications.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.rust-lang.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg" alt="Rust Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>Rust - A modern language focused on safety and performance, great for system programming.</p>
+                    </li>
+                    <li>
+                        <a href="https://www.ruby-lang.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="Ruby Logo" style="width: 100px; height: auto;">
+                        </a>
+                        <p>Ruby - Known for its simplicity, often used for web development with Ruby on Rails.</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="steps">
+            <h2>Steps to Start Coding</h2>
+            <article>
+                <h3>1. Choose a Programming Language</h3>
+                <p>Start with beginner-friendly languages like Python, JavaScript, or HTML/CSS.</p>
+                <a href="https://www.python.org/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                </a>
+            </article>
+
+            <article>
+                <h3>2. Set Up Your Environment</h3>
+                <p>Install a code editor like Visual Studio Code or Sublime Text to write and test your code.</p>
+                <a href="https://code.visualstudio.com/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo">
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learn to Code. Empowering the next generation of developers!</p>
+    </footer>
+
+    <script>
+        // Get modal and buttons
+        const termsModal = document.getElementById('terms-modal');
+        const agreeBtn = document.getElementById('agree-btn');
+        const disagreeBtn = document.getElementById('disagree-btn');
+
+        // Handle "I Agree" button
+        agreeBtn.addEventListener('click', () => {
+            termsModal.style.display = 'none'; // Hide the modal
+        });
+
+        // Handle "I Disagree" button
+        disagreeBtn.addEventListener('click', () => {
+            alert('You must agree to the terms and conditions to use this website.');
+            window.location.href = 'https://www.google.com'; // Redirect to another page
+        });
+    </script>
+</body>
+</html>
